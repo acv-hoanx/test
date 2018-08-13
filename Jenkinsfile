@@ -1,11 +1,6 @@
 pipeline {
   agent any
 
-  branches('develop'){
-    steps {
-      sh  'echo  "This branch develop"'
-    }
-  }
   stages {
     stage('Build') {
       steps {
@@ -20,6 +15,7 @@ pipeline {
     stage('Deploy'){
       steps {
         sh  'echo  "DEPLOY STAGE"'
+        sh  'ls -l'
       }
     }
   }
