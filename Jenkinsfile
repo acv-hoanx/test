@@ -17,7 +17,7 @@ pipeline {
         branch 'develop'
       }
       steps {
-        sh  'echo  "DEPLOY STAGE"'
+        sh  'echo  "DEPLOY STAGE -----"'
         sh  'ls -l'
       }
     }
