@@ -6,16 +6,6 @@ pipeline {
       sh  'echo  "This branch develop"'
     }
   }
-  branches('feature/#1'){
-    steps {
-      sh  'echo  "This branch feature/%231"'
-    }
-  }
-  branches('feature/%231'){
-    steps {
-      sh  'echo  "This branch feature/%231"'
-    }
-  }
 
   stages {
     stage('Build') {
