@@ -13,6 +13,10 @@ pipeline {
         }
     }
     stage('Deploy'){
+      when {
+        branch 'develop'
+        sh  'echo  "DEPLOY Develop"'
+      }
       steps {
         sh  'echo  "DEPLOY STAGE"'
         sh  'ls -l'
