@@ -13,7 +13,7 @@ pipeline {
         sh  'echo  "TEST STAGE"'
         }
     }
-    stage('Deploy'){
+    stage('Deploy - Develop'){
       when {
         branch 'develop'
       }
@@ -21,6 +21,8 @@ pipeline {
         sh  'echo  "DEPLOY DEVELOP -----"'
         sh  'ls -l'
       }
+    }
+    stage('Deploy - Production'){
       when {
         branch 'master'
       }
